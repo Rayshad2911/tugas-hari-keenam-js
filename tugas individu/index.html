@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        window.onload = function() {
+            alert('Halo! Silahkan lakukan pendaftaran untuk mendownload VALORANT.');
+        }
+    </script>
+</head>
+<body>
+    <h1>CREATE AN ACCOUNT</h1>
+    <form action="#" method="post" onsubmit="return validasi()">
+        <label class="email">What's your email?</label>
+        <p class="subtext">Don't worry we won't tell anyone.</p>
+        <input type="email" id="email" name="email" placeholder="EMAIL" size="30">
+        <br><br><br>
+        <label class="born">When were you born?</label>
+        <p class="subtext">Let's find out how old you are.</p>
+        <input type="date" id="tanggal" name="tanggal">
+        <br><br><br>
+        <label class="username">Choose a username</label>
+        <p class="subtext">Used for sign in to all our games.</p>
+        <input type="text" id="username" name="username" placeholder="USERNAME" size="30">
+        <br><br><br>
+        <label class="password">Choose a password</label>
+        <p class="subtext">Make sure it's a good one.</p>
+        <input type="password" id="password" name="password" placeholder="PASSWORD" size="30">
+        <br><br>
+        <input type="submit" value="Kirim">
+        <br><br><br><p>Already have account?</p>
+        <input type="button" onclick="confirm('Clicking yes means you canceling registration. Are you sure to keep continue?    ')" value="Sign In" id="button">
+    </form>
+
+    <script>
+        function validasi() {
+            var email = document.getElementById("email").value;
+            var born = document.getElementById("tanggal").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (email == "") {
+                alert("Email tidak boleh kosong");
+                return false;
+            }
+
+            if (born == "") {
+                alert("Tanggal lahir harus diisi");
+                return false;
+            }
+
+            if (username == "") {
+                alert("Username harus diisi");
+                return false;
+            }
+
+            if (password == "") {
+                alert("Password harus diisi");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
